@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="艺声乐器音乐社区 — 音乐爱好者互动交流平台，分享你的音乐见解与文化感悟。">
+  <title>音乐社区 — 艺声乐器文化传播</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg sticky-top" role="navigation" aria-label="主导航">
+    <div class="container">
+      <a href="index.html" class="navbar-brand" aria-label="艺声乐器首页">
+        <span class="brand-icon"><i class="bi bi-music-note-beamed"></i></span>
+        <span>艺声乐器</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="切换导航菜单">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">首页</a></li>
+          <li class="nav-item"><a class="nav-link" href="instruments.html">乐器展示</a></li>
+          <li class="nav-item"><a class="nav-link" href="culture.html">文化溯源</a></li>
+          <li class="nav-item"><a class="nav-link active" href="profile-comments.html">音乐社区</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <nav class="breadcrumb-nav" aria-label="面包屑导航">
+        <a href="index.html">首页</a>
+        <i class="bi bi-chevron-right"></i>
+        <span>音乐社区</span>
+      </nav>
+      <h1>音乐社区</h1>
+      <p class="page-desc">音乐爱好者互动交流平台，分享你的音乐见解与文化感悟</p>
+    </div>
+  </section>
+
+  <!-- Community Message Board -->
+  <section class="container section-sm">
+    <div class="row g-4">
+      <!-- Main Content: Message Board -->
+      <div class="col-lg-8">
+
+        <!-- Post Message Form -->
+        <div class="community-post-card fade-in-up mb-4">
+          <h3 class="community-section-title"><i class="bi bi-pencil-square"></i> 发表留言</h3>
+          <form id="message-form" class="community-form">
+            <div class="mb-3">
+              <input type="text" class="form-control" id="msg-nickname" placeholder="标题" maxlength="50" required>
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" id="msg-content" rows="4" placeholder="分享你的音乐想法..." maxlength="500" required></textarea>
+              <div class="form-hint"><span id="char-count">0</span>/500</div>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <i class="bi bi-send"></i> 发布留言
+            </button>
+          </form>
+        </div>
+
+        <!-- Messages List -->
+        <div class="community-messages-wrap" id="messagesWrap">
+          <div id="messages-list" class="community-messages">
+            <!-- Dynamically rendered by JS -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Sidebar: Community Info -->
+      <aside class="col-lg-4">
+        <!-- Community Stats -->
+        <div class="community-sidebar-card fade-in-up mb-4">
+          <h4><i class="bi bi-bar-chart"></i> 社区动态</h4>
+          <div class="community-stats-grid">
+            <div class="community-stat">
+              <div class="community-stat-num" id="total-messages">8</div>
+              <div class="community-stat-lbl">留言总数</div>
+            </div>
+            <div class="community-stat">
+              <div class="community-stat-num" id="today-messages">3</div>
+              <div class="community-stat-lbl">今日新增</div>
+            </div>
+            <div class="community-stat">
+              <div class="community-stat-num" id="total-likes">56</div>
+              <div class="community-stat-lbl">累计点赞</div>
+            </div>
+            <div class="community-stat">
+              <div class="community-stat-num" id="online-users">12</div>
+              <div class="community-stat-lbl">在线乐友</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hot Topics -->
+        <div class="community-sidebar-card fade-in-up mb-4">
+          <h4><i class="bi bi-fire"></i> 热门话题</h4>
+          <ul class="hot-topics-list">
+            <li><a href="culture.html"><span class="topic-rank rank-1">1</span> 古筝与中国传统文化</a></li>
+            <li><a href="culture.html"><span class="topic-rank rank-2">2</span> 爵士乐的诞生与演变</a></li>
+            <li><a href="instruments.html"><span class="topic-rank rank-3">3</span> 小提琴选购指南</a></li>
+            <li><a href="culture.html"><span class="topic-rank">4</span> 非洲鼓入门教学</a></li>
+            <li><a href="instruments.html"><span class="topic-rank">5</span> 电吉他与原声吉他的区别</a></li>
+          </ul>
+        </div>
+
+        <!-- Community Rules -->
+        <div class="community-sidebar-card fade-in-up">
+          <h4><i class="bi bi-info-circle"></i> 社区公约</h4>
+          <ul class="rules-list">
+            <li><i class="bi bi-check2"></i> 尊重每位乐友的观点</li>
+            <li><i class="bi bi-check2"></i> 分享真实、有价值的音乐见解</li>
+            <li><i class="bi bi-check2"></i> 禁止发布商业广告与不良信息</li>
+            <li><i class="bi bi-check2"></i> 鼓励乐器学习经验交流</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand">
+            <div class="brand-name">艺声乐器文化传播</div>
+            <p class="brand-desc">声音连接文化，音乐传承文明。</p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-6">
+          <h5>快速链接</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="instruments.html">乐器展示</a></li>
+            <li><a href="culture.html">文化溯源</a></li>
+            <li><a href="profile-comments.html">音乐社区</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-6">
+          <h5>乐器分类</h5>
+          <ul class="footer-links">
+            <li><a href="instruments.html">弦乐器</a></li>
+            <li><a href="instruments.html">管乐器</a></li>
+            <li><a href="instruments.html">打击乐器</a></li>
+            <li><a href="instruments.html">键盘乐器</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h5>联系方式</h5>
+          <div class="footer-contact">
+            <p><i class="bi bi-envelope"></i> contact@yisheng-music.com</p>
+            <p><i class="bi bi-telephone"></i> 400-888-8888</p>
+            <p><i class="bi bi-geo-alt"></i> 中国·北京</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> 艺声乐器文化传播网站. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="回到顶部">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <div class="toast-wrap" id="toastWrap" aria-live="polite"></div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>

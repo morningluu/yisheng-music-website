@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="艺声乐器文化溯源 — 探索乐器背后的历史文化故事，从东方古筝到西方钢琴。">
+  <title>文化溯源 — 艺声乐器文化传播</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg sticky-top" role="navigation" aria-label="主导航">
+    <div class="container">
+      <a href="index.html" class="navbar-brand" aria-label="艺声乐器首页">
+        <span class="brand-icon"><i class="bi bi-music-note-beamed"></i></span>
+        <span>艺声乐器</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="切换导航菜单">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">首页</a></li>
+          <li class="nav-item"><a class="nav-link" href="instruments.html">乐器展示</a></li>
+          <li class="nav-item"><a class="nav-link active" href="culture.html">文化溯源</a></li>
+          <li class="nav-item"><a class="nav-link" href="profile-comments.html">音乐社区</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <nav class="breadcrumb-nav" aria-label="面包屑导航">
+        <a href="index.html">首页</a>
+        <i class="bi bi-chevron-right"></i>
+        <span>文化溯源</span>
+      </nav>
+      <h1>文化溯源</h1>
+      <p class="page-desc">探索乐器背后的历史文化故事，追溯音乐文明的发展脉络</p>
+    </div>
+  </section>
+
+  <!-- Feature Article Carousel (三图轮播) -->
+  <section class="container" aria-label="编辑精选轮播">
+    <div id="featureCarousel" class="carousel slide carousel-fade mb-5" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="幻灯片 1"></button>
+        <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="1" aria-label="幻灯片 2"></button>
+        <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="2" aria-label="幻灯片 3"></button>
+      </div>
+      <div class="carousel-inner rounded-4 overflow-hidden">
+        <!-- Slide 1: 古筝 -->
+        <div class="carousel-item active">
+          <div class="carousel-slide slide-1" style="background: url('images/24.jpg') center/cover;">
+            <div class="carousel-overlay"></div>
+            <div class="carousel-content">
+              <span class="feature-tag">编辑精选</span>
+              <h2 class="feature-title">中国古筝艺术：两千年弦音的传承与发展</h2>
+              <p class="feature-desc">从战国时期的二十五弦到现代二十一弦，古筝见证了中国音乐文化的演变历程。它不仅是乐器，更是中华文明的音乐符号。</p>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 2: 西塔琴 -->
+        <div class="carousel-item">
+          <div class="carousel-slide slide-2" style="background: url('images/20.jpg') center/cover;">
+            <div class="carousel-overlay"></div>
+            <div class="carousel-content">
+              <span class="feature-tag">编辑精选</span>
+              <h2 class="feature-title">西塔琴与拉格：印度古典音乐的灵魂对话</h2>
+              <p class="feature-desc">西塔琴不仅是乐器，更是印度哲学与精神世界的音乐表达。通过拉格旋律体系，它连接着天地与人心。</p>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 3: 钢琴 -->
+        <div class="carousel-item">
+          <div class="carousel-slide slide-3" style="background: url('images/25.jpeg') center/cover;">
+            <div class="carousel-overlay"></div>
+            <div class="carousel-content">
+              <span class="feature-tag">编辑精选</span>
+              <h2 class="feature-title">钢琴的演变：从羽管键琴到现代三角钢琴</h2>
+              <p class="feature-desc">三百年钢琴发展史，见证西方音乐从巴洛克到现代的辉煌历程。从巴赫到肖邦，钢琴始终是音乐创作的核心。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#featureCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">上一页</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#featureCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">下一页</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Culture Articles Grid (8 articles) -->
+  <section class="container section-sm" aria-label="文化资讯列表">
+    <div class="row g-4">
+
+      <!-- Article 1: 尺八 -->
+      <div class="col-lg-6">
+        <article class="culture-card">
+          <div class="card-img">
+            <img src="images/15.jpg" alt="尺八" class="w-100" style="aspect-ratio: 16/10; object-fit: cover;" loading="lazy">
+          </div>
+          <div class="card-body">
+            <span class="card-category">东方管乐</span>
+            <h3 class="card-title">尺八：源自中国、兴于日本的禅意之音</h3>
+            <p class="card-excerpt">尺八以其独特的音色和禅宗文化背景，成为东方音乐中不可或缺的管乐器代表。</p>
+            <div class="card-stats">
+              <span><i class="bi bi-eye"></i> 1,560</span>
+              <a href="culture.html" class="btn btn-read-more">
+                阅读全文 <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Article 2: 弗拉门戈吉他 -->
+      <div class="col-lg-6">
+        <article class="culture-card">
+          <div class="card-img">
+            <img src="images/16.jpg" alt="弗拉门戈吉他" class="w-100" style="aspect-ratio: 16/10; object-fit: cover;" loading="lazy">
+          </div>
+          <div class="card-body">
+            <span class="card-category">西班牙音乐</span>
+            <h3 class="card-title">弗拉门戈吉他：西班牙热情的音乐灵魂</h3>
+            <p class="card-excerpt">弗拉门戈吉他以其独特的演奏技巧和强烈的情感表达风靡世界。</p>
+            <div class="card-stats">
+              <span><i class="bi bi-eye"></i> 2,080</span>
+              <a href="culture.html" class="btn btn-read-more">
+                阅读全文 <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Article 3: 古筝 -->
+      <div class="col-lg-3 col-md-6">
+        <article class="culture-card">
+          <div class="card-img">
+            <img src="images/22.jpg" alt="古筝与中国传统文化" class="w-100" style="aspect-ratio: 16/10; object-fit: cover;" loading="lazy">
+          </div>
+          <div class="card-body">
+            <span class="card-category">中国传统</span>
+            <h3 class="card-title">古筝与中国传统文化</h3>
+            <p class="card-excerpt">古筝承载着数千年的中华音乐文明。</p>
+            <div class="card-stats">
+              <span><i class="bi bi-eye"></i> 1,890</span>
+              <a href="culture.html" class="btn btn-read-more">
+                阅读全文 <i class="bi bi-chevron-down"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Article 4: 爵士乐 -->
+      <div class="col-lg-3 col-md-6">
+        <article class="culture-card">
+          <div class="card-img">
+            <img src="images/18.jpg" alt="爵士乐的诞生与演变" class="w-100" style="aspect-ratio: 16/10; object-fit: cover;" loading="lazy">
+          </div>
+          <div class="card-body">
+            <span class="card-category">爵士文化</span>
+            <h3 class="card-title">爵士乐的诞生与演变</h3>
+            <p class="card-excerpt">从新奥尔良到全世界，爵士乐如何改变音乐版图。</p>
+            <div class="card-stats">
+              <span><i class="bi bi-eye"></i> 2,450</span>
+              <a href="culture.html" class="btn btn-read-more">
+                阅读全文 <i class="bi bi-chevron-down"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Article 5: 非洲鼓 -->
+      <div class="col-lg-3 col-md-6">
+        <article class="culture-card">
+          <div class="card-img">
+            <img src="images/19.jpg" alt="非洲鼓：节奏中的部落记忆" class="w-100" style="aspect-ratio: 16/10; object-fit: cover;" loading="lazy">
+          </div>
+          <div class="card-body">
+            <span class="card-category">非洲音乐</span>
+            <h3 class="card-title">非洲鼓：节奏中的部落记忆</h3>
+            <p class="card-excerpt">非洲鼓不仅是乐器，更是部落文化的载体。</p>
+            <div class="card-stats">
+              <span><i class="bi bi-eye"></i> 1,340</span>
+              <a href="culture.html" class="btn btn-read-more">
+                阅读全文 <i class="bi bi-chevron-down"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Article 6: 西塔琴 -->
+      <div class="col-lg-3 col-md-6">
+        <article class="culture-card">
+          <div class="card-img">
+            <img src="images/20.jpg" alt="西塔琴与印度拉格音乐" class="w-100" style="aspect-ratio: 16/10; object-fit: cover;" loading="lazy">
+          </div>
+          <div class="card-body">
+            <span class="card-category">印度古典</span>
+            <h3 class="card-title">西塔琴与印度拉格音乐</h3>
+            <p class="card-excerpt">探索西塔琴在印度古典音乐中的独特地位。</p>
+            <div class="card-stats">
+              <span><i class="bi bi-eye"></i> 1,720</span>
+              <a href="culture.html" class="btn btn-read-more">
+                阅读全文 <i class="bi bi-chevron-down"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Article 7: 钢琴演变 -->
+      <div class="col-lg-6">
+        <article class="culture-card">
+          <div class="card-img">
+            <img src="images/25.jpeg" alt="钢琴的演变" class="w-100" style="aspect-ratio: 16/10; object-fit: cover;" loading="lazy">
+          </div>
+          <div class="card-body">
+            <span class="card-category">西方乐器史</span>
+            <h3 class="card-title">钢琴的演变：从羽管键琴到现代三角钢琴</h3>
+            <p class="card-excerpt">三百年的钢琴发展史见证了西方音乐从巴洛克到现代的辉煌历程。</p>
+            <div class="card-stats">
+              <span><i class="bi bi-eye"></i> 3,120</span>
+              <a href="culture.html" class="btn btn-read-more">
+                阅读全文 <i class="bi bi-chevron-down"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Article 8: 古琴 -->
+      <div class="col-lg-6">
+        <article class="culture-card">
+          <div class="card-img">
+            <img src="images/22.jpg" alt="古琴：文人雅士的精神寄托" class="w-100" style="aspect-ratio: 16/10; object-fit: cover;" loading="lazy">
+          </div>
+          <div class="card-body">
+            <span class="card-category">中国传统</span>
+            <h3 class="card-title">古琴：文人雅士的精神寄托</h3>
+            <p class="card-excerpt">古琴作为中国最古老的弹拨乐器之一，承载着深厚的文化内涵。</p>
+            <div class="card-stats">
+              <span><i class="bi bi-eye"></i> 2,760</span>
+              <a href="culture.html" class="btn btn-read-more">
+                阅读全文 <i class="bi bi-chevron-down"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand">
+            <div class="brand-name">艺声乐器文化传播</div>
+            <p class="brand-desc">声音连接文化，音乐传承文明。</p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-6">
+          <h5>快速链接</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="instruments.html">乐器展示</a></li>
+            <li><a href="culture.html">文化溯源</a></li>
+            <li><a href="profile-comments.html">音乐社区</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-6">
+          <h5>乐器分类</h5>
+          <ul class="footer-links">
+            <li><a href="instruments.html">弦乐器</a></li>
+            <li><a href="instruments.html">管乐器</a></li>
+            <li><a href="instruments.html">打击乐器</a></li>
+            <li><a href="instruments.html">键盘乐器</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h5>联系方式</h5>
+          <div class="footer-contact">
+            <p><i class="bi bi-envelope"></i> contact@yisheng-music.com</p>
+            <p><i class="bi bi-telephone"></i> 400-888-8888</p>
+            <p><i class="bi bi-geo-alt"></i> 中国·北京</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> 艺声乐器文化传播网站. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="回到顶部">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <div class="toast-wrap" id="toastWrap" aria-live="polite"></div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

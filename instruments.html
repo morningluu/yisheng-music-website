@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="艺声乐器展示 — 浏览世界各地的经典乐器，弦乐器、管乐器、打击乐器、键盘乐器一应俱全。">
+  <title>乐器展示 — 艺声乐器文化传播</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg sticky-top" role="navigation" aria-label="主导航">
+    <div class="container">
+      <a href="index.html" class="navbar-brand" aria-label="艺声乐器首页">
+        <span class="brand-icon"><i class="bi bi-music-note-beamed"></i></span>
+        <span>艺声乐器</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="切换导航菜单">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">首页</a></li>
+          <li class="nav-item"><a class="nav-link active" href="instruments.html">乐器展示</a></li>
+          <li class="nav-item"><a class="nav-link" href="culture.html">文化溯源</a></li>
+          <li class="nav-item"><a class="nav-link" href="profile-comments.html">音乐社区</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <nav class="breadcrumb-nav" aria-label="面包屑导航">
+        <a href="index.html">首页</a>
+        <i class="bi bi-chevron-right"></i>
+        <span>乐器展示</span>
+      </nav>
+      <h1>乐器展示</h1>
+      <p class="page-desc">探索来自世界各地的经典乐器，发现属于您的音乐之声</p>
+    </div>
+  </section>
+
+  <!-- Filter Section -->
+  <section class="container" aria-label="分类筛选">
+    <div class="search-section">
+      <div class="search-row">
+        <div class="search-input-wrap">
+          <i class="bi bi-search search-icon"></i>
+          <input type="text" class="search-input" placeholder="搜索乐器名称或产地..." aria-label="搜索乐器" disabled>
+        </div>
+        <select class="search-select" id="category-filter" aria-label="乐器分类筛选">
+          <option value="all">全部分类</option>
+          <option value="string">弦乐器</option>
+          <option value="wind">管乐器</option>
+          <option value="percussion">打击乐器</option>
+          <option value="keyboard">键盘乐器</option>
+        </select>
+        <button class="btn btn-primary" id="filter-btn" type="button">
+          <i class="bi bi-funnel"></i> 筛选
+        </button>
+        <button class="btn btn-outline-primary" id="reset-btn" type="button">
+          <i class="bi bi-arrow-repeat"></i> 重置
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instruments Grid -->
+  <section class="container" aria-label="乐器列表">
+    <div class="row g-4" id="instruments-grid">
+      <!-- Dynamically rendered by JS -->
+    </div>
+    <div id="pagination" class="pagination-wrap">
+      <!-- Dynamically rendered by JS -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand">
+            <div class="brand-name">艺声乐器文化传播</div>
+            <p class="brand-desc">声音连接文化，音乐传承文明。</p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-6">
+          <h5>快速链接</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="instruments.html">乐器展示</a></li>
+            <li><a href="culture.html">文化溯源</a></li>
+            <li><a href="profile-comments.html">音乐社区</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-6">
+          <h5>乐器分类</h5>
+          <ul class="footer-links">
+            <li><a href="instruments.html">弦乐器</a></li>
+            <li><a href="instruments.html">管乐器</a></li>
+            <li><a href="instruments.html">打击乐器</a></li>
+            <li><a href="instruments.html">键盘乐器</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h5>联系方式</h5>
+          <div class="footer-contact">
+            <p><i class="bi bi-envelope"></i> contact@yisheng-music.com</p>
+            <p><i class="bi bi-telephone"></i> 400-888-8888</p>
+            <p><i class="bi bi-geo-alt"></i> 中国·北京</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> 艺声乐器文化传播网站. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="回到顶部">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <div class="toast-wrap" id="toastWrap" aria-live="polite"></div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/instruments.js"></script>
+</body>
+</html>

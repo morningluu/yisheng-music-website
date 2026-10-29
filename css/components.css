@@ -1,0 +1,373 @@
+/* ============================================================
+   艺声乐器文化传播网站 — 组件样式
+   Yisheng Musical Culture — Component Styles
+   ============================================================ */
+
+/* ============================================================
+   Instrument Card — 乐器卡片
+   ============================================================ */
+.instrument-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-base);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.instrument-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.instrument-card .card-img {
+  overflow: hidden;
+}
+
+.instrument-card .placeholder-img {
+  border-radius: 0;
+  transition: none;
+}
+
+.instrument-card .card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-lg);
+}
+
+.instrument-card .card-title {
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-title);
+  margin-bottom: var(--space-xs);
+}
+
+.instrument-card .card-origin {
+  font-size: 0.8125rem;
+  color: var(--color-muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.instrument-card .card-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md) var(--space-lg);
+  border-top: 1px solid var(--border-light);
+}
+
+/* ============================================================
+   Culture Article Card — 文化文章卡片
+   ============================================================ */
+.culture-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-base);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.culture-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.culture-card .card-img {
+  overflow: hidden;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.culture-card .card-img .placeholder-img {
+  border-radius: 0;
+}
+
+.culture-card .card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-lg);
+}
+
+.culture-card .card-category {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-sm);
+  background: var(--brand-light);
+  color: var(--brand-primary);
+  width: fit-content;
+}
+
+.culture-card .card-title {
+  font-size: 1.0625rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-title);
+  margin-bottom: var(--space-sm);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.5;
+}
+
+.culture-card .card-excerpt {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: var(--space-sm);
+  flex: 1;
+}
+
+.culture-card .card-stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  font-size: 0.8125rem;
+  color: var(--color-muted);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--border-light);
+  margin-top: auto;
+}
+
+.culture-card .card-stats span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ============================================================
+   Feature Article (文化页精选大图) — 依赖style.css中的.culture-feature
+   此处仅补充组件内元素样式
+   ============================================================ */
+
+/* ============================================================
+   Stats Counter Item
+   ============================================================ */
+.stat-item .stat-icon {
+  font-size: 1.5rem;
+  color: var(--brand-primary);
+  margin-bottom: var(--space-sm);
+  opacity: 0.6;
+}
+
+/* ============================================================
+   Filter Tag Active State (已在style.css定义基础样式)
+   ============================================================ */
+
+/* ============================================================
+   Search Bar Components
+   ============================================================ */
+#result-info {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+}
+
+/* ============================================================
+   No Results (空结果)
+   ============================================================ */
+.no-results {
+  text-align: center;
+  padding: var(--space-3xl) var(--space-md);
+  grid-column: 1 / -1;
+}
+
+.no-results-icon {
+  font-size: 3rem;
+  color: var(--border-dark);
+  margin-bottom: var(--space-md);
+}
+
+.no-results h3 {
+  color: var(--color-title);
+  margin-bottom: var(--space-xs);
+}
+
+.no-results p {
+  color: var(--color-muted);
+  font-size: 0.9375rem;
+}
+
+/* ============================================================
+   Loading Skeleton
+   ============================================================ */
+.skeleton {
+  background: linear-gradient(90deg, var(--bg-section) 25%, #e8e8e8 50%, var(--bg-section) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+  border-radius: var(--radius-sm);
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ============================================================
+   Badge Tags
+   ============================================================ */
+.badge-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-full);
+}
+
+.badge-tag-purple { background: var(--brand-light); color: var(--brand-primary); }
+.badge-tag-blue   { background: rgba(59, 130, 246, 0.1); color: #3b82f6; }
+.badge-tag-green  { background: rgba(34, 197, 94, 0.1); color: #22c55e; }
+.badge-tag-orange { background: rgba(249, 115, 22, 0.1); color: #f97316; }
+.badge-tag-red    { background: rgba(239, 68, 68, 0.1); color: #ef4444; }
+
+/* ============================================================
+   Modal Overlay
+   ============================================================ */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-base);
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-xl);
+  transform: translateY(20px);
+  transition: transform var(--transition-base);
+}
+
+.modal-overlay.open .modal-content {
+  transform: translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--color-muted);
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.modal-close:hover {
+  background: var(--bg-section);
+  color: var(--color-title);
+}
+
+/* ============================================================
+   Feature Article (文化页Hero大图组件)
+   ============================================================ */
+.feature-article {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  cursor: pointer;
+  background: var(--gradient-banner);
+  transition: all var(--transition-base);
+}
+
+.feature-article:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.feature-article .feature-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.6) 100%);
+  z-index: 1;
+}
+
+.feature-article .feature-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-xl);
+  z-index: 2;
+}
+
+.feature-article .feature-tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-sm);
+}
+
+.feature-article .feature-title {
+  font-size: 1.75rem;
+  font-weight: var(--font-weight-bold);
+  color: #ffffff;
+  margin-bottom: var(--space-sm);
+}
+
+.feature-article .feature-desc {
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 80%;
+}
+
+.feature-article .feature-icon {
+  position: absolute;
+  top: var(--space-xl);
+  right: var(--space-xl);
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.1);
+  z-index: 1;
+}
+
+/* Bootstrap Icons within cards */
+.instrument-card .card-origin i,
+.culture-card .card-stats i {
+  font-size: 0.875rem;
+}

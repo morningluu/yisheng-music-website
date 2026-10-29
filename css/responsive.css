@@ -1,0 +1,561 @@
+/* ============================================================
+   艺声乐器文化传播网站 — 响应式样式
+   Yisheng Musical Culture — Responsive Styles
+   断点: 1400 / 1200 / 992 / 768 / 576 / 375
+   Mobile-first覆盖策略 (max-width)
+   ============================================================ */
+
+/* --- Max 1400px --- */
+@media (max-width: 1400px) {
+  :root {
+    --container-max: 1140px;
+    --space-3xl: 56px;
+    --space-4xl: 72px;
+  }
+
+  .hero {
+    padding: 100px 0 var(--space-3xl);
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* --- Max 1200px --- */
+@media (max-width: 1200px) {
+  :root {
+    --container-max: 960px;
+    --space-2xl: 40px;
+    --space-3xl: 48px;
+    --space-4xl: 64px;
+  }
+
+  /* Footer: 品牌列占满第一行 */
+  .footer .row > .col-lg-4 {
+    width: 100%;
+    margin-bottom: var(--space-lg);
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 260px 1fr;
+  }
+
+  .culture-feature .feature-title,
+  .feature-article .feature-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* --- Max 992px — 平板 / 导航折叠 --- */
+@media (max-width: 992px) {
+  :root {
+    --container-max: 720px;
+    --space-xl: 24px;
+    --space-2xl: 32px;
+    --space-3xl: 40px;
+    --space-4xl: 48px;
+  }
+
+  .hero {
+    padding: 80px 0 var(--space-2xl);
+  }
+
+  .hero-title {
+    font-size: 2.25rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  /* Navbar mobile */
+  .navbar-nav {
+    padding: var(--space-md) 0;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px 16px !important;
+  }
+
+  /* Stats: 4列 → 2列 */
+  .stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Dashboard: 侧边栏 → 顶部 */
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-sidebar {
+    position: static;
+  }
+
+  /* User menu: 水平排列 */
+  .user-menu {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .user-menu-item {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .user-stats {
+    flex-direction: row;
+  }
+
+  /* Feature article */
+  .culture-feature .feature-title,
+  .feature-article .feature-title {
+    font-size: 1.375rem;
+  }
+
+  .culture-feature .feature-desc,
+  .feature-article .feature-desc {
+    font-size: 0.875rem;
+    max-width: 100%;
+  }
+
+  /* Page header */
+  .page-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .section-title {
+    font-size: 1.625rem;
+  }
+}
+
+/* --- Max 768px — 小平板 --- */
+@media (max-width: 768px) {
+  :root {
+    --container-max: 540px;
+    --space-lg: 20px;
+    --space-xl: 24px;
+    --space-2xl: 32px;
+    --space-3xl: 40px;
+    --space-4xl: 48px;
+  }
+
+  .hero {
+    padding: 72px 0 var(--space-xl);
+  }
+
+  .hero-title {
+    font-size: 1.875rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9375rem;
+  }
+
+  .hero-badge {
+    font-size: 0.6875rem;
+    padding: 4px 12px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+
+  /* Section */
+  .section {
+    padding: var(--space-2xl) 0;
+  }
+
+  /* Stats */
+  .stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .stat-number {
+    font-size: 1.625rem;
+  }
+
+  /* Search row: 纵向堆叠 */
+  .search-row {
+    flex-direction: column;
+  }
+
+  .search-row > * {
+    width: 100%;
+  }
+
+  .search-input-wrap {
+    min-width: 0;
+  }
+
+  .search-select {
+    width: 100%;
+  }
+
+  /* Community */
+  .message-replies {
+    padding-left: 40px;
+  }
+
+  .reply-form-wrap {
+    padding-left: 40px;
+  }
+
+  .community-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Comment header */
+  .comment-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* CTA */
+  .cta-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-section p {
+    font-size: 0.9375rem;
+  }
+
+  /* Page header */
+  .page-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  /* Footer links: 2列 */
+  .footer .col-lg-2 {
+    width: 50%;
+    margin-bottom: var(--space-lg);
+  }
+}
+
+/* --- Max 576px — 大手机 --- */
+@media (max-width: 576px) {
+  :root {
+    --container-max: 100%;
+    --space-md: 12px;
+    --space-lg: 16px;
+    --space-xl: 20px;
+    --space-2xl: 24px;
+    --space-3xl: 32px;
+    --space-4xl: 40px;
+  }
+
+  .hero {
+    padding: 64px 0 var(--space-lg);
+  }
+
+  .hero-title {
+    font-size: 1.625rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.875rem;
+    line-height: 1.7;
+  }
+
+  .hero-badge {
+    font-size: 0.625rem;
+    letter-spacing: 1px;
+    padding: 4px 10px;
+  }
+
+  .hero-badge .badge-dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  /* Stats: 始终保持2列 */
+  .stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xs);
+  }
+
+  .stat-item {
+    padding: var(--space-md);
+  }
+
+  .stat-number {
+    font-size: 1.375rem;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+  }
+
+  /* Section */
+  .section-header {
+    margin-bottom: var(--space-xl);
+  }
+
+  .section-title {
+    font-size: 1.375rem;
+  }
+
+  .section-desc {
+    font-size: 0.9375rem;
+  }
+
+  /* Search */
+  .search-section {
+    padding: var(--space-md);
+  }
+
+  .filter-tags {
+    gap: 6px;
+  }
+
+  .filter-tag {
+    padding: 5px 12px;
+    font-size: 0.75rem;
+  }
+
+  /* Page header */
+  .page-header {
+    padding: var(--space-lg) 0 var(--space-md);
+  }
+
+  .page-header h1 {
+    font-size: 1.375rem;
+  }
+
+  /* Card info bar — 小屏幕紧凑排列 */
+  .card-info-bar {
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card-info-stat {
+    font-size: 0.75rem;
+    gap: 3px;
+  }
+
+  /* CTA */
+  .cta-section {
+    padding: var(--space-2xl) 0;
+  }
+
+  .cta-section h2 {
+    font-size: 1.375rem;
+  }
+
+  /* Footer */
+  .footer .col-lg-2 {
+    width: 50%;
+  }
+
+  .footer .col-lg-3 {
+    width: 100%;
+    margin-bottom: var(--space-lg);
+  }
+
+  /* User card */
+  .user-card-header {
+    padding: var(--space-lg);
+  }
+
+  .user-avatar {
+    width: 56px;
+    height: 56px;
+    font-size: 1.5rem;
+  }
+
+  /* Comment */
+  .comment-card {
+    padding: var(--space-md);
+  }
+
+  .comment-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+
+  /* Culture Modal */
+  .culture-modal {
+    width: 95%;
+    max-height: 85vh;
+  }
+
+  .culture-modal-body {
+    padding: var(--space-lg);
+  }
+
+  .culture-modal-body .modal-article-title {
+    font-size: 1.25rem;
+  }
+
+  /* Community */
+  .community-post-card {
+    padding: var(--space-md);
+  }
+
+  .message-card {
+    padding: var(--space-md);
+  }
+
+  .message-replies {
+    padding-left: 28px;
+  }
+
+  .reply-form-wrap {
+    padding-left: 28px;
+  }
+
+  .reply-form {
+    flex-direction: column;
+  }
+
+  .reply-form .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+
+  /* Scroll top */
+  .scroll-top {
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  /* Culture card stats — 小屏幕确保按钮不挤压 */
+  .culture-card .card-stats {
+    gap: var(--space-sm);
+  }
+
+  .culture-card .card-stats .btn-read-more {
+    font-size: 0.75rem;
+  }
+
+  /* Feature article */
+  .culture-feature,
+  .feature-article {
+    aspect-ratio: 4 / 3;
+  }
+
+  .culture-feature .feature-content,
+  .feature-article .feature-content {
+    padding: var(--space-lg);
+  }
+
+  .carousel-content .feature-title {
+    font-size: 1.125rem;
+  }
+
+  .carousel-content .feature-desc {
+    font-size: 0.8125rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .carousel-content {
+    padding: var(--space-lg);
+    max-width: 100%;
+  }
+
+  .culture-feature .feature-title,
+  .feature-article .feature-title {
+    font-size: 1.125rem;
+  }
+
+  .culture-feature .feature-desc,
+  .feature-article .feature-desc {
+    font-size: 0.8125rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Pagination */
+  .pagination-wrap {
+    gap: 4px;
+  }
+
+  .pagination-wrap .page-btn {
+    min-width: 36px;
+    height: 36px;
+    font-size: 0.8125rem;
+  }
+}
+
+/* --- Max 375px — 小手机 --- */
+@media (max-width: 375px) {
+  .hero-title {
+    font-size: 1.375rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.8125rem;
+  }
+
+  .hero-badge {
+    font-size: 0.5625rem;
+  }
+
+  /* Stats: 极端情况仍保持2列 */
+  .stat-number {
+    font-size: 1.25rem;
+  }
+
+  /* Section */
+  .section-title {
+    font-size: 1.25rem;
+  }
+
+  /* Page header */
+  .page-header h1 {
+    font-size: 1.25rem;
+  }
+
+  /* Footer columns: 全部单列 */
+  .footer .col-lg-2 {
+    width: 100%;
+  }
+
+  /* User menu items: compact */
+  .user-menu-item {
+    padding: 8px 10px;
+    font-size: 0.8125rem;
+    gap: 4px;
+  }
+
+  /* Comment */
+  .comment-article {
+    font-size: 0.875rem;
+  }
+
+  .comment-body {
+    font-size: 0.8125rem;
+  }
+
+  /* Pagination */
+  .pagination-wrap .page-btn {
+    min-width: 32px;
+    height: 32px;
+    font-size: 0.75rem;
+    padding: 0 8px;
+  }
+}
